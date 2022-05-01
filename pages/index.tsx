@@ -9,12 +9,45 @@ const Home: NextPage = () => {
   const { t } = useTranslation("common");
 
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Made In Carnaval</title>
       </Head>
-
-      <main className={styles.main}>{t("welcome")}</main>
+      <main className={styles.main}>
+        <div
+          className="parallax-container"
+          style={{ backgroundImage: "url(/banner.jpg)" }}
+        >
+          <div className="abs-center-container">
+            <div className="abs-center-content" style={{ fontSize: "36px" }}>
+              Nicole & Chase
+            </div>
+            <div className="abs-center-content" style={{ paddingBottom: "0" }}>
+              Rio de Janeiro, Brazil
+            </div>
+            <div className="abs-center-content">April 22, 2023</div>
+          </div>
+        </div>
+        <div className="content-stripe">
+          <h3>{t("storyTitle")}</h3>
+          <p>{t("storyContent")}</p>
+        </div>
+        <div
+          className="parallax-container"
+          style={{ backgroundImage: "url(/couple2.jpg)" }}
+        ></div>
+        <div className="content-stripe-dark">
+          <h3>{t("guideTitle")}</h3>
+        </div>
+        <div
+          className="parallax-container"
+          style={{ backgroundImage: "url(/rio_beach.jpg)" }}
+        >
+          <div className="abs-center-container">
+            <div className="abs-center-content">{t("goodbye")}</div>
+          </div>
+        </div>
+      </main>
 
       <footer className={styles.footer}>
         <a
