@@ -17,6 +17,9 @@ export const Navbar: React.FC = () => {
       <Link href="/guide">
         <a>Travel Guide</a>
       </Link>
+      <Link href="/things">
+        <a>Things To Do</a>
+      </Link>
       <Link href="/honeyfund">
         <a>Honeyfund</a>
       </Link>
