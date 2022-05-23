@@ -40,6 +40,9 @@ a {
   padding: 18px;
   font-size: 25px;
   font-family: 'Raleway', sans-serif;
+}
+
+.bold {
   font-weight: 700;
 }
 

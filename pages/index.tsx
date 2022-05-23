@@ -19,19 +19,25 @@ const Home: NextPage = () => {
           style={{ backgroundImage: "url(/banner.jpg)" }}
         >
           <div className="abs-center-container">
-            <div className="abs-center-content" style={{ fontSize: "36px" }}>
+            <div
+              className="abs-center-content bold"
+              style={{ fontSize: "36px" }}
+            >
               Nicole & Chase
             </div>
             <div
               className="abs-center-content"
               style={{ fontSize: "26px", padding: "0" }}
             >
-              🇧🇷 + 🇺🇸
+              &#127463;&#127479; + &#x1F1FA;&#x1F1F8;
             </div>
-            <div className="abs-center-content" style={{ paddingBottom: "0" }}>
+            <div
+              className="abs-center-content bold"
+              style={{ paddingBottom: "0" }}
+            >
               Rio de Janeiro, Brazil
             </div>
-            <div className="abs-center-content">April 15, 2023</div>
+            <div className="abs-center-content bold">April 15, 2023</div>
           </div>
         </div>
         <div className="content-stripe">
