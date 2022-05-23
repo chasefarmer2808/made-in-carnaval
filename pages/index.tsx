@@ -22,15 +22,22 @@ const Home: NextPage = () => {
             <div className="abs-center-content" style={{ fontSize: "36px" }}>
               Nicole & Chase
             </div>
+            <div
+              className="abs-center-content"
+              style={{ fontSize: "26px", padding: "0" }}
+            >
+              🇧🇷 + 🇺🇸
+            </div>
             <div className="abs-center-content" style={{ paddingBottom: "0" }}>
               Rio de Janeiro, Brazil
             </div>
-            <div className="abs-center-content">April 22, 2023</div>
+            <div className="abs-center-content">April 15, 2023</div>
           </div>
         </div>
         <div className="content-stripe">
-          <h3>{t("storyTitle")}</h3>
-          <p>{t("storyContent")}</p>
+          <h3>{t("rioTitle")}</h3>
+          <p>{t("rioContent1")}</p>
+          <p>{t("rioContent2")}</p>
         </div>
         <div
           className="parallax-container"
@@ -38,6 +45,7 @@ const Home: NextPage = () => {
         ></div>
         <div className="content-stripe-dark">
           <h3>{t("guideTitle")}</h3>
+          <p>{t("guideIntro")}</p>
         </div>
         <div
           className="parallax-container"
