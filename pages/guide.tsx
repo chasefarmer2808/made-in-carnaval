@@ -4,7 +4,7 @@ import Image from "next/image";
 const Guide: NextPage = () => {
   return (
     <main>
-      <section className="content-stripe">
+      <section className="content-stripe-thin">
         <h3>Traveling from the USA</h3>
         <p>
           Rio has two major airports: Galeao (GIG) and Santos Dumont (SDU). Fun
@@ -23,7 +23,7 @@ const Guide: NextPage = () => {
           for around $500 or less.
         </p>
       </section>
-      <section className="content-stripe">
+      <section className="content-stripe-thin">
         <h3>Local Currency</h3>
         <p>
           It is best to use a travel credit card when you can, but it is also
@@ -34,7 +34,7 @@ const Guide: NextPage = () => {
           better rate ourside the airport.{" "}
         </p>
       </section>
-      <section className="content-stripe">
+      <section className="content-stripe-thin">
         <h3>Do I Need to Rent a Car?</h3>
         <p>
           NO! GOD NO! PLEASE!!!! Traffic and parking are not great in Rio, so we
@@ -43,7 +43,7 @@ const Guide: NextPage = () => {
           easy to use.
         </p>
       </section>
-      <section className="content-stripe">
+      <section className="content-stripe-thin">
         <h3>Where to Stay</h3>
         <p>
           While the party will be in the historical center of Rio, we recommend
