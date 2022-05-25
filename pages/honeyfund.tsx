@@ -55,7 +55,21 @@ const Honeyfund: NextPage = () => {
     <main>
       <section className="content-stripe-thin">
         <h3>{t("fundTitle")}</h3>
-        <p style={{ paddingBottom: "16px" }}>{t("fundIntro")}</p>
+        <p>{t("fundIntro")}</p>
+        <h3>Payment Methods</h3>
+        <div className="payment-methods">
+          <div>
+            <h3>Brazil</h3>
+            <p>Pix nicole.guimaraesoc@gmail.com</p>
+          </div>
+          <div>
+            <h3>US</h3>
+            <p>Venmo @chase-farmer-6</p>
+          </div>
+        </div>
+        <p style={{ textAlign: "center" }}>{t("fundNote")}</p>
+      </section>
+      <section className="content-stripe-thin">
         <div className="item-grid">
           {funds.map((fund) => (
             <FundItem key={fund.imgSrc} {...{ ...fund }} />
