@@ -144,10 +144,11 @@ button:active {
   text-align: justify;
 }
 
-.things-grid {
+.item-grid {
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  row-gap: 24px;
 }
 
 @media screen and (min-width: 600px) {

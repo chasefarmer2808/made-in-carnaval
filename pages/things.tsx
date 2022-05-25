@@ -24,7 +24,7 @@ const Things: NextPage = () => {
     <main>
       <section className="content-stripe-thin">
         <h3>Famous Spots</h3>
-        <div className="things-grid">
+        <div className="item-grid">
           {thingsData.map((thing) => (
             <ImageLink key={thing.imgSrc} {...{ ...thing }} />
           ))}
