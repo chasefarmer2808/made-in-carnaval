@@ -11,7 +11,7 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Made In Carnaval</title>
+        <title>Made In Rio</title>
       </Head>
       <main className={styles.main}>
         <div

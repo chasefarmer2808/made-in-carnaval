@@ -1,20 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
 
+:root {
+  --bg-color-primary: #f5f3ef;
+  --bg-color-secondary: #d09a6e;
+  --bg-color-tertiary: rgb(135, 45, 35);
+  --bg-color-accent: #cfb07b;
+  --bg-color-transparent: #ffffffc9;
+  --font-color: #777;
+  --font-color-inverse: #111;
+  --font-color-inverse: black;
+  --nav-height: 40px;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 12px 0 0 0;
 }
 
 a {
-  color: inherit;
+  color: var(--font-color-inverse);
   text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+a.link-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  background-color: var(--bg-color-tertiary);
+  color: var(--font-color);
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.1s ease;
+}
+
+a.link-button:active {
+  box-shadow: inset 1px 1px 10px #333;
 }
 
 * {
   box-sizing: border-box;
+}
+
+nav {
+  background-color: var(--bg-color-secondary);
+  color: var(--font-color-inverse);
+  display: grid;
+  grid-template-rows: auto auto;
+  align-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  transition: transform 0.3s;
+  z-index: 2; /* Handle relative positioned elements on the page. */
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+button:active {
+  box-shadow: inset 1px 1px 10px #333;
+}
+
+.nav-hidden {
+  transform: translateY(calc(-1 * var(--nav-height)));
 }
 
 .parallax-container {
@@ -64,14 +124,14 @@ a {
 }
 
 .content-stripe {
-  color: #777;
+  color: var(--font-color);
   background-color: white;
   padding: 50px 80px;
   text-align: justify;
 }
 
 .content-stripe-thin {
-  color: #777;
+  color: var(--font-color);
   background-color: white;
   padding: 20px 40px;
   text-align: justify;
@@ -88,4 +148,13 @@ a {
   display: grid;
   align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+@media screen and (min-width: 600px) {
+  nav {
+    grid-template-rows: 100%;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding-right: 2.4rem;
+  }
 }
