@@ -1,16 +1,75 @@
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import { Icon } from "./Icon";
-import { NavLink } from "./NavLink";
+import { NavLink, NavLinkProps } from "./NavLink";
 import styles from "../styles/Navbar.module.css";
+
+const usLinks: NavLinkProps[] = [
+  {
+    label: "Home",
+    href: "/home",
+  },
+  {
+    label: "Travel Guide",
+    href: "/guide",
+  },
+  {
+    label: "Things To Do",
+    href: "/things",
+  },
+  {
+    label: "Honeyfund",
+    href: "/honeyfund",
+  },
+  {
+    label: "RSVP",
+    href: "/rsvp",
+  },
+  {
+    label: "Portuguese Phrases",
+    href: "/phrases",
+  },
+];
+
+const brLinks: NavLinkProps[] = [
+  {
+    label: "Home",
+    href: "/home",
+  },
+  {
+    label: "Travel Guide",
+    href: "/guide",
+  },
+  {
+    label: "Things To Do",
+    href: "/things",
+  },
+  {
+    label: "Cota Lua de Mel",
+    href: "/honeyfund",
+  },
+  {
+    label: "Confirmação de presença",
+    href: "/rsvp",
+  },
+  {
+    label: "Frases em Inglês",
+    href: "/phrases",
+  },
+];
 
 export const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [navClass, setNavClass] = useState("");
+  const [links, setLinks] = useState(usLinks);
   const prevScrollPos = useRef(0);
   const router = useRouter();
 
   useEffect(() => {
+    console.log(router);
+    if (router.locale === "pt-BR") {
+      setLinks(brLinks);
+    }
     setMenuOpen(false);
   }, [router]);
 
@@ -55,12 +114,15 @@ export const Navbar: React.FC = () => {
             : styles["nav-link-container"]
         }
       >
-        <NavLink href="/" label="Home" />
-        <NavLink href="/guide" label="Travel Guide" />
-        <NavLink href="/things" label="Things To Do" />
-        <NavLink href="/honeyfund" label="Honeyfund" />
-        <NavLink href="/rsvp" label="RSVP" />
-        <NavLink href="/phrases" label="Portuguese Phrases" />
+        {links.map((link) => (
+          <NavLink key={link.href} href={link.href} label={link.label} />
+        ))}
+        {/* // <NavLink href="/" label="Home" />
+        // <NavLink href="/guide" label="Travel Guide" />
+        // <NavLink href="/things" label="Things To Do" />
+        // <NavLink href="/honeyfund" label="Honeyfund" />
+        // <NavLink href="/rsvp" label="RSVP" />
+        // <NavLink href="/phrases" label="Portuguese Phrases" /> */}
       </span>
     </nav>
     // <div
