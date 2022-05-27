@@ -8,7 +8,7 @@ import { DropDownMenu } from "./DropDownMenu";
 const usLinks: NavLinkProps[] = [
   {
     label: "Home",
-    href: "/home",
+    href: "/",
   },
   {
     label: "Travel Guide",
