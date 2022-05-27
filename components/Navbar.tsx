@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { Icon } from "./Icon";
 import { NavLink, NavLinkProps } from "./NavLink";
 import styles from "../styles/Navbar.module.css";
+import { DropDownMenu } from "./DropDownMenu";
 
 const usLinks: NavLinkProps[] = [
   {
@@ -64,9 +65,9 @@ export const Navbar: React.FC = () => {
   const [links, setLinks] = useState(usLinks);
   const prevScrollPos = useRef(0);
   const router = useRouter();
+  const { pathname, asPath, query } = router;
 
   useEffect(() => {
-    console.log(router);
     if (router.locale === "pt-BR") {
       setLinks(brLinks);
     }
@@ -91,6 +92,15 @@ export const Navbar: React.FC = () => {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
   }, []);
+
+  const handleLanguageSelect = (language: string) => {
+    console.log(language);
+    if (language === "Portuguese") {
+      router.push({ pathname, query }, asPath, { locale: "pt-BR" });
+    } else {
+      router.push({ pathname, query }, asPath, { locale: "en-US" });
+    }
+  };
 
   return (
     <nav className={navClass}>
@@ -117,41 +127,19 @@ export const Navbar: React.FC = () => {
         {links.map((link) => (
           <NavLink key={link.href} href={link.href} label={link.label} />
         ))}
-        {/* // <NavLink href="/" label="Home" />
-        // <NavLink href="/guide" label="Travel Guide" />
-        // <NavLink href="/things" label="Things To Do" />
-        // <NavLink href="/honeyfund" label="Honeyfund" />
-        // <NavLink href="/rsvp" label="RSVP" />
-        // <NavLink href="/phrases" label="Portuguese Phrases" /> */}
+        <span className={styles["language-menu-container-mobile"]}>
+          <DropDownMenu
+            items={["English", "Portuguese"]}
+            onSelect={handleLanguageSelect}
+          />
+        </span>
+      </span>
+      <span className={styles["language-menu-container"]}>
+        <DropDownMenu
+          items={["English", "Portuguese"]}
+          onSelect={handleLanguageSelect}
+        />
       </span>
     </nav>
-    // <div
-    //   style={{
-    //     width: "100%",
-    //     height: "1.5rem",
-    //     position: "relative",
-    //     zIndex: "1",
-    //     backgroundColor: "#d09a6e",
-    //   }}
-    // >
-    //   <Link href="/">
-    //     <a>Home</a>
-    //   </Link>
-    //   <Link href="/guide">
-    //     <a>Travel Guide</a>
-    //   </Link>
-    //   <Link href="/things">
-    //     <a>Things To Do</a>
-    //   </Link>
-    //   <Link href="/honeyfund">
-    //     <a>Honeyfund</a>
-    //   </Link>
-    //   <Link href="/rsvp">
-    //     <a>RSVP</a>
-    //   </Link>
-    //   <Link href="/phrases">
-    //     <a>Portugrese Phrases</a>
-    //   </Link>
-    // </div>
   );
 };
