@@ -34,7 +34,7 @@ const usLinks: NavLinkProps[] = [
 const brLinks: NavLinkProps[] = [
   {
     label: "Home",
-    href: "/home",
+    href: "/",
   },
   {
     label: "Travel Guide",
