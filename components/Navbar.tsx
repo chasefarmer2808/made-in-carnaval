@@ -94,7 +94,6 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const handleLanguageSelect = (language: string) => {
-    console.log(language);
     if (language === "Portuguese") {
       router.push({ pathname, query }, asPath, { locale: "pt-BR" });
     } else {
