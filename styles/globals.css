@@ -24,8 +24,6 @@ body {
 a {
   color: var(--font-color-inverse);
   text-decoration: none;
-  font-family: 'Raleway', sans-serif;
-  font-weight: bold;
   font-size: 18px;
 }
 
