@@ -72,6 +72,16 @@ button:active {
   box-shadow: inset 1px 1px 10px #333;
 }
 
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
 .nav-hidden {
   transform: translateY(calc(-1 * var(--nav-height)));
 }
