@@ -72,9 +72,14 @@ const PHRASES: Phrase[] = [
 const Phrases: NextPage = () => {
   return (
     <main
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        paddingTop: "50px",
+      }}
     >
-      <div className="content-stripe">
+      <div>
         <table>
           <thead>
             <tr>
