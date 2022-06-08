@@ -4,6 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { useTranslation } from "react-i18next";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   const { t } = useTranslation("common");
@@ -26,12 +27,6 @@ const Home: NextPage = () => {
               Nicole & Chase
             </div>
             <div
-              className="abs-center-content"
-              style={{ fontSize: "26px", padding: "0" }}
-            >
-              &#127463;&#127479; + &#x1F1FA;&#x1F1F8;
-            </div>
-            <div
               className="abs-center-content bold"
               style={{ paddingBottom: "0" }}
             >
@@ -52,6 +47,9 @@ const Home: NextPage = () => {
         <div className="content-stripe-dark">
           <h3>{t("guideTitle")}</h3>
           <p>{t("guideIntro")}</p>
+          <Link href="/guide">
+            <a className="link-button">Click here for our travel guide!</a>
+          </Link>
         </div>
         <div
           className="parallax-container"

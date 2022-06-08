@@ -44,15 +44,14 @@ const Things: NextPage = () => {
         style={{ backgroundImage: "url(/garden2.jpg)" }}
       >
         <div className="abs-center-container">
-          <div className="abs-center-content">
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://visit.rio/en/welcome/"
-            >
-              Click Here to Explore More!
-            </a>
-          </div>
+          <a
+            className="link-button"
+            target="_blank"
+            rel="noreferrer"
+            href="https://visit.rio/en/welcome/"
+          >
+            Click Here to Explore More!
+          </a>
         </div>
       </div>
       <section className="content-stripe-thin">
