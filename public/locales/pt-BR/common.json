@@ -15,5 +15,7 @@
   "navThings": "Things To Do",
   "navFund": "Cota Lua de Mel",
   "navRsvp": "Confirmação de presença",
-  "navPhrases": "Frases em Inglês"
+  "navPhrases": "Frases em Inglês",
+  "rsvpIntro": "We hope you can make it!",
+  "rsvpLink": "Click Here to RSVP"
 }

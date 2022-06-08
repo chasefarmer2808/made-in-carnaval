@@ -18,7 +18,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  padding: 12px 0 0 0;
+  /* padding: 12px 0 0 0; */
 }
 
 a {
@@ -29,14 +29,15 @@ a {
 
 a.link-button {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   font-size: 1.4rem;
   background-color: var(--bg-color-tertiary);
-  color: var(--font-color);
+  color: white;
   padding: 8px;
   border-radius: 8px;
   transition: all 0.1s ease;
+  cursor: pointer;
 }
 
 a.link-button:active {

@@ -15,5 +15,7 @@
   "navThings": "Things To Do",
   "navFund": "HoneyFund",
   "navRsvp": "RSVP",
-  "navPhrases": "Portuguese Phrases"
+  "navPhrases": "Portuguese Phrases",
+  "rsvpIntro": "We hope you can make it!",
+  "rsvpLink": "Click Here to RSVP"
 }
