@@ -133,12 +133,12 @@ export const Navbar: React.FC = () => {
           />
         </span>
       </span>
-      <span className={styles["language-menu-container"]}>
+      <div className={styles["language-menu-container"]}>
         <DropDownMenu
           items={["English", "Portuguese"]}
           onSelect={handleLanguageSelect}
         />
-      </span>
+      </div>
     </nav>
   );
 };

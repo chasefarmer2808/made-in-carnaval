@@ -28,6 +28,10 @@
   display: none;
 }
 
+.language-menu-container-mobile {
+  display: block;
+}
+
 @media screen and (min-width: 600px) {
   .nav-link-container {
     display: inline-flex;
@@ -35,6 +39,15 @@
   }
 
   .nav-menu-btn {
+    display: none;
+  }
+
+  .language-menu-container {
+    display: block;
+    justify-self: end;
+  }
+
+  .language-menu-container-mobile {
     display: none;
   }
 }
