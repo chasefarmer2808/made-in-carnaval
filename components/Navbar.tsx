@@ -19,6 +19,10 @@ const usLinks: NavLinkProps[] = [
     href: "/things",
   },
   {
+    label: "Gallery",
+    href: "/gallery",
+  },
+  {
     label: "Honeyfund",
     href: "/honeyfund",
   },
@@ -44,6 +48,10 @@ const brLinks: NavLinkProps[] = [
   {
     label: "Things To Do",
     href: "/things",
+  },
+  {
+    label: "Galeria",
+    href: "/gallery",
   },
   {
     label: "Cota Lua de Mel",
