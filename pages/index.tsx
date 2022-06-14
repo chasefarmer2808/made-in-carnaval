@@ -55,16 +55,16 @@ const Home: NextPage = () => {
               <a className="link-button">Things To Do</a>
             </Link>
             <Link href="/rsvp">
-              <a className="link-button">RSVP</a>
+              <a className="link-button">{t("navRsvp")}</a>
             </Link>
             <Link href="/honeyfund">
-              <a className="link-button">Honeyfund</a>
+              <a className="link-button">{t("navFund")}</a>
             </Link>
             <Link href="/gallery">
-              <a className="link-button">Gallery</a>
+              <a className="link-button">{t("navGallery")}</a>
             </Link>
             <Link href="/phrases">
-              <a className="link-button">Portuguese Phrases</a>
+              <a className="link-button">{t("navPhrases")}</a>
             </Link>
           </div>
         </div>
