@@ -85,7 +85,7 @@ export const Navbar: React.FC = () => {
   const handleScroll = () => {
     const currentScrollPos = window.scrollY;
 
-    if (prevScrollPos.current > currentScrollPos) {
+    if (prevScrollPos.current > currentScrollPos || currentScrollPos === 0) {
       // Scrolling down.
       setNavClass("");
     } else {
