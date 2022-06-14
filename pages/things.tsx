@@ -21,7 +21,7 @@ const thingsData: ImageLinkProps[] = [
 
 const Things: NextPage = () => {
   return (
-    <main>
+    <main className="page-wrapper">
       <section className="content-stripe-thin">
         <h3>Famous Spots</h3>
         <div className="item-grid">

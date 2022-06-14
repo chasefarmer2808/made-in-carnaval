@@ -183,6 +183,10 @@ tr:nth-child(even) {
   gap: 12px;
 }
 
+.page-wrapper {
+  padding-top: 30px;
+}
+
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}

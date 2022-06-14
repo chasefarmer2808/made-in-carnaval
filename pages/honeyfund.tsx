@@ -52,7 +52,7 @@ const Honeyfund: NextPage = () => {
     },
   ];
   return (
-    <main>
+    <main className="page-wrapper">
       <section className="content-stripe-thin">
         <h3>{t("fundTitle")}</h3>
         <p>{t("fundIntro")}</p>

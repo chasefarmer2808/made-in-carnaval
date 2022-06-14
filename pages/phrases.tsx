@@ -76,7 +76,7 @@ const Phrases: NextPage = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        paddingTop: "50px",
+        paddingTop: "70px",
       }}
     >
       <div>

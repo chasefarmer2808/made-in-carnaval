@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Guide: NextPage = () => {
   return (
-    <main>
+    <main className="page-wrapper">
       <section className="content-stripe-thin">
         <h3>Traveling from the USA</h3>
         <p>
