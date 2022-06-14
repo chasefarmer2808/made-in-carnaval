@@ -44,12 +44,29 @@ const Home: NextPage = () => {
           className="parallax-container"
           style={{ backgroundImage: "url(/couple2.jpg)" }}
         ></div>
-        <div className="content-stripe-dark">
+        <div className="content-stripe">
           <h3>{t("guideTitle")}</h3>
           <p>{t("guideIntro")}</p>
-          <Link href="/guide">
-            <a className="link-button">Click here for our travel guide!</a>
-          </Link>
+          <div className="link-container">
+            <Link href="/guide">
+              <a className="link-button">Travel Guide</a>
+            </Link>
+            <Link href="/things">
+              <a className="link-button">Things To Do</a>
+            </Link>
+            <Link href="/rsvp">
+              <a className="link-button">RSVP</a>
+            </Link>
+            <Link href="/honeyfund">
+              <a className="link-button">Honeyfund</a>
+            </Link>
+            <Link href="/gallery">
+              <a className="link-button">Gallery</a>
+            </Link>
+            <Link href="/phrases">
+              <a className="link-button">Portuguese Phrases</a>
+            </Link>
+          </div>
         </div>
         <div
           className="parallax-container"

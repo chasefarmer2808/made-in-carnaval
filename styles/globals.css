@@ -49,7 +49,7 @@ a.link-button:active {
 }
 
 nav {
-  background-color: var(--bg-color-secondary);
+  background-color: #67b0c7;
   color: var(--font-color-inverse);
   display: grid;
   grid-template-rows: auto auto;
@@ -176,6 +176,13 @@ tr:nth-child(even) {
   background-color: #717171 !important;
 }
 
+.link-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
@@ -201,5 +208,11 @@ tr:nth-child(even) {
     align-items: center;
     grid-template-columns: repeat(3, minmax(240px, 1fr));
     row-gap: 24px;
+  }
+
+  .link-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 }
