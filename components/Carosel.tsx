@@ -52,7 +52,6 @@ export const Carosel: React.FC<CaroselProps> = ({ items, header }) => {
 
   return (
     <div>
-      {header && <h2>{header}</h2>}
       <div className={styles["carosel-container"]}>
         {items.map((item, index) => (
           <div
@@ -67,10 +66,12 @@ export const Carosel: React.FC<CaroselProps> = ({ items, header }) => {
             <div className={styles["item-number"]}>
               {index + 1} / {items.length}
             </div>
-            <Image src={item.src} layout="fill" objectFit="cover" />
+            <Image src={item.src} layout="fill" objectFit="contain" />
             {item.caption && (
-              <div className={`${styles["item-caption"]} fade`}>
-                {item.caption}
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                <div className={`${styles["item-caption"]} fade`}>
+                  {item.caption}
+                </div>
               </div>
             )}
             <button className={styles["prev"]} onClick={prevImg}>

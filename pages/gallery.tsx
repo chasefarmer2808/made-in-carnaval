@@ -16,7 +16,7 @@ const items: CaroselItem[] = [
   },
   {
     src: "/gallery/shanendoa.jpg",
-    caption: "Shanendoa, Virginia, 2021",
+    caption: "Shenandoah, Virginia, 2021",
   },
   {
     src: "/gallery/rio.jpg",
@@ -50,7 +50,7 @@ const Gallery: NextPage = () => {
       style={{
         height: "100vh",
         paddingTop: "10px",
-        backgroundColor: "#282E34",
+        backgroundColor: "white",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
