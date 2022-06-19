@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import { appWithTranslation } from "next-i18next";
 import { Navbar } from "../components/Navbar";
 import Script from "next/script";
+import { Footer } from "../components/Footer";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -17,6 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         )}
       <Navbar />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }

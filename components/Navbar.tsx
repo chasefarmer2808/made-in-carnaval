@@ -5,7 +5,7 @@ import { NavLink, NavLinkProps } from "./NavLink";
 import styles from "../styles/Navbar.module.css";
 import { DropDownMenu } from "./DropDownMenu";
 
-const usLinks: NavLinkProps[] = [
+export const usLinks: NavLinkProps[] = [
   {
     label: "Home",
     href: "/",
@@ -36,7 +36,7 @@ const usLinks: NavLinkProps[] = [
   },
 ];
 
-const brLinks: NavLinkProps[] = [
+export const brLinks: NavLinkProps[] = [
   {
     label: "Home",
     href: "/",

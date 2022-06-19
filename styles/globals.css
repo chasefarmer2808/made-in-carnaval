@@ -8,7 +8,6 @@
   --bg-color-transparent: #ffffffc9;
   --font-color: #777;
   --font-color-inverse: #111;
-  --font-color-inverse: black;
   --nav-height: 40px;
 }
 
@@ -25,6 +24,12 @@ a {
   color: var(--font-color-inverse);
   text-decoration: none;
   font-size: 18px;
+}
+
+a.inline {
+  color: var(--bg-color-tertiary);
+  text-decoration: none;
+  font-size: 20px;
 }
 
 a.link-button {
@@ -108,6 +113,13 @@ tr:nth-child(even) {
   justify-content: center;
 }
 
+.abs-flex {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
 .abs-center-container {
   position: absolute;
   text-align: center;
@@ -120,6 +132,13 @@ tr:nth-child(even) {
   padding: 18px;
   font-size: 25px;
   font-family: 'Raleway', sans-serif;
+}
+
+.content-container {
+  background-color: #d09a6e;
+  color: #111;
+  padding: 18px;
+  font-size: 22px;
 }
 
 .col-center {
