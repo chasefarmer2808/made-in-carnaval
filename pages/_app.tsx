@@ -5,14 +5,13 @@ import { Navbar } from "../components/Navbar";
 import Script from "next/script";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  console.log(process.env);
   return (
     <>
       {process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL &&
         process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && (
           <Script
-            src={process.env.UMAMI_SCRIPT_URL}
-            data-website-id={process.env.UMAMI_WEBSITE_ID}
+            src={process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL}
+            data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
             strategy="lazyOnload"
           />
         )}
