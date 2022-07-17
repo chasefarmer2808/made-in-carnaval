@@ -156,7 +156,6 @@ tr:nth-child(even) {
   color: var(--font-color);
   background-color: white;
   padding: 50px 80px;
-  text-align: justify;
 }
 
 .content-stripe-thin {
