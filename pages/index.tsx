@@ -68,12 +68,10 @@ const Home: NextPage = () => {
             </Link>
           </div>
           <div style={{ textAlign: "center" }}>
-            <h3>
-              <span>Questions? Email us at</span>{" "}
-              <a className="inline" href="mailto:nicandchase@madeinrio2023.com">
-                nicandchase@madeinrio2023.com
-              </a>
-            </h3>
+            <h3>Questions? Email us at</h3>
+            <a className="inline" href="mailto:nicandchase@madeinrio2023.com">
+              nicandchase@madeinrio2023.com
+            </a>
           </div>
         </div>
       </main>
