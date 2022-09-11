@@ -5,6 +5,20 @@ const Guide: NextPage = () => {
   return (
     <main className="page-wrapper">
       <section className="content-stripe-thin">
+        <h3>Hotel Accomodations</h3>
+        <p>
+          We have two hotel options for guests to choose from: Rio Othon Palace,
+          and Savoy Othon. Both are located on the south end of the Copacabana
+          Beach area. Othon Palace is located right on the beach, while Savoy
+          Othon is a couple blocks up. Both hotels offer free breakfast, wifi, a
+          gym and a kids play area. However,{" "}
+          <b>
+            only Rio Othon Palace offers beach views, rooms with balconies, and
+            a pool.
+          </b>
+        </p>
+      </section>
+      <section className="content-stripe-thin">
         <h3>Traveling from the USA</h3>
         <p>
           Rio has two major airports: Galeao (GIG) and Santos Dumont (SDU). Fun
