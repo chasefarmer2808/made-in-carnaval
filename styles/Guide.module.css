@@ -1,0 +1,13 @@
+.hotel-listings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+  .hotel-listings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}

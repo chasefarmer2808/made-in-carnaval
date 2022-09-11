@@ -29,7 +29,7 @@ a {
 a.inline {
   color: var(--bg-color-tertiary);
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 a.link-button {

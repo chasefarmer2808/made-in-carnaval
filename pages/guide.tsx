@@ -1,5 +1,7 @@
 import { NextPage } from "next";
 import Image from "next/image";
+import { Icon } from "../components/Icon";
+import styles from "../styles/Guide.module.css";
 
 const Guide: NextPage = () => {
   return (
@@ -17,6 +19,61 @@ const Guide: NextPage = () => {
             a pool.
           </b>
         </p>
+        <p>
+          See the links to the official websites below. We have group codes for
+          each Hotel listed below as well. Please use the code when booking on
+          their websites!
+        </p>
+        <div className={styles["hotel-listings"]}>
+          <div style={{ textAlign: "center" }}>
+            <h4>Rio Othon Palace</h4>
+            <div
+              style={{ position: "relative", width: "250px", height: "250px" }}
+            >
+              <Image
+                src="/palace.webp"
+                layout="fill"
+                objectPosition="contain"
+              />
+            </div>
+            <span style={{ display: "block" }}>
+              <em>Group Code: 39405</em>
+            </span>
+            <span style={{ display: "block" }}>
+              <a
+                href="https://book.omnibees.com/hotelresults?c=1343&q=2042&hotel_folder=&NRooms=1&CheckIn=11042023&CheckOut=16042023&ad=1&ch=0&ag=&group_code=39405&lang=en-US&currencyId=16"
+                target="_blank"
+                rel="noreferrer"
+                className="inline"
+              >
+                Official Link
+                <Icon name="external-link" />
+              </a>
+            </span>
+          </div>
+          <div style={{ textAlign: "center" }}>
+            <h4>Savoy Othon</h4>
+            <div
+              style={{ position: "relative", width: "250px", height: "250px" }}
+            >
+              <Image src="/savoy.webp" layout="fill" objectPosition="contain" />
+            </div>
+            <span style={{ display: "block" }}>
+              <em>Group Code: 77175</em>
+            </span>
+            <span style={{ display: "block" }}>
+              <a
+                href="https://book.omnibees.com/hotelresults?c=1343&q=2043&hotel_folder=&NRooms=1&CheckIn=11042023&CheckOut=16042023&ad=1&ch=0&ag=&group_code=77175&lang=en-US&currencyId=16"
+                target="_blank"
+                rel="noreferrer"
+                className="inline"
+              >
+                Official Link
+                <Icon name="external-link" />
+              </a>
+            </span>
+          </div>
+        </div>
       </section>
       <section className="content-stripe-thin">
         <h3>Traveling from the USA</h3>
