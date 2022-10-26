@@ -1,15 +1,17 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 export interface ImageLinkProps {
-  imgSrc: string;
+  imgSrc: StaticImageData;
   link: string;
   linkLabel: string;
+  altText: string;
 }
 
 export const ImageLink: React.FC<ImageLinkProps> = ({
   imgSrc,
   link,
   linkLabel,
+  altText,
 }) => {
   return (
     <div
@@ -21,9 +23,9 @@ export const ImageLink: React.FC<ImageLinkProps> = ({
       }}
     >
       <div style={{ position: "relative", width: "250px", height: "200px" }}>
-        <Image src={imgSrc} layout="fill" objectPosition="contain" />
+        <Image src={imgSrc} fill={true} alt={altText} />
       </div>
-      <a target="_blank" rel="noreferrer" href={link}>
+      <a target='_blank' rel='noreferrer' href={link}>
         {linkLabel}
       </a>
     </div>
