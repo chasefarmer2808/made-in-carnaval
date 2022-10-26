@@ -16,60 +16,60 @@ const Home: NextPage = () => {
       </Head>
       <main className={styles.main}>
         <div
-          className="parallax-container"
+          className='parallax-container'
           style={{ backgroundImage: "url(/banner.jpg)" }}
         >
-          <div className="abs-center-container">
+          <div className='abs-center-container'>
             <div
-              className="abs-center-content bold"
+              className='abs-center-content bold'
               style={{ fontSize: "36px" }}
             >
               Nicole & Chase
             </div>
             <div
-              className="abs-center-content bold"
+              className='abs-center-content bold'
               style={{ paddingBottom: "0" }}
             >
               Rio de Janeiro, Brazil
             </div>
-            <div className="abs-center-content bold">April 15, 2023</div>
+            <div className='abs-center-content bold'>April 15, 2023</div>
           </div>
         </div>
-        <div className="content-stripe">
+        <div className='content-stripe'>
           <h3>{t("rioTitle")}</h3>
           <p>{t("rioContent1")}</p>
           <p>{t("rioContent2")}</p>
         </div>
         <div
-          className="parallax-container"
+          className='parallax-container'
           style={{ backgroundImage: "url(/couple2.jpg)" }}
         ></div>
-        <div className="content-stripe">
+        <div className='content-stripe'>
           <h3>{t("guideTitle")}</h3>
           <p>{t("guideIntro")}</p>
-          <div className="link-container">
-            <Link href="/guide">
-              <a className="link-button">Travel Guide</a>
+          <div className='link-container'>
+            <Link className='link-button' href='/guide'>
+              Travel Guide
             </Link>
-            <Link href="/things">
-              <a className="link-button">Things To Do</a>
+            <Link className='link-button' href='/things'>
+              Things To Do
             </Link>
-            <Link href="/rsvp">
-              <a className="link-button">{t("navRsvp")}</a>
+            <Link className='link-button' href='/rsvp'>
+              {t("navRsvp")}
             </Link>
-            <Link href="/honeyfund">
-              <a className="link-button">{t("navFund")}</a>
+            <Link className='link-button' href='/honeyfund'>
+              {t("navFund")}
             </Link>
-            <Link href="/gallery">
-              <a className="link-button">{t("navGallery")}</a>
+            <Link className='link-button' href='/gallery'>
+              {t("navGallery")}
             </Link>
-            <Link href="/phrases">
-              <a className="link-button">{t("navPhrases")}</a>
+            <Link className='link-button' href='/phrases'>
+              {t("navPhrases")}
             </Link>
           </div>
           <div style={{ textAlign: "center" }}>
             <h3>Questions? Email us at</h3>
-            <a className="inline" href="mailto:nicandchase@madeinrio2023.com">
+            <a className='inline' href='mailto:nicandchase@madeinrio2023.com'>
               nicandchase@madeinrio2023.com
             </a>
           </div>
