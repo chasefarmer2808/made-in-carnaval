@@ -4,7 +4,7 @@ import styles from "../styles/Carosel.module.css";
 
 export interface CaroselItem {
   src: string;
-  caption?: string;
+  caption: string;
 }
 
 interface CaroselProps {
@@ -70,6 +70,7 @@ export const Carosel: React.FC<CaroselProps> = ({ items, header }) => {
               src={item.src}
               fill={true}
               style={{ objectFit: "contain" }}
+              alt={item.caption}
             />
             {item.caption && (
               <div style={{ display: "flex", justifyContent: "center" }}>
