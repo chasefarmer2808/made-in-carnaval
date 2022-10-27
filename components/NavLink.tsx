@@ -17,9 +17,7 @@ export const NavLink: React.FC<NavLinkProps> = ({ href, label = href }) => {
         router.asPath === href ? styles["nav-link-active"] : ""
       }`}
     >
-      <Link href={href}>
-        <a>{label}</a>
-      </Link>
+      <Link href={href}>{label}</Link>
     </button>
   );
 };

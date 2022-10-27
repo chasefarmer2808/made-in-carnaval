@@ -24,16 +24,16 @@ export const Footer: React.FC = () => {
   return (
     <footer>
       {showSiteMap && (
-        <div className="link-container" style={{ padding: "8px" }}>
+        <div className='link-container' style={{ padding: "8px" }}>
           {links.map((link) => (
-            <Link key={link.href} href={link.href}>
-              <a className="link-button">{link.label}</a>
+            <Link key={link.href} className='link-button' href={link.href}>
+              {link.label}
             </Link>
           ))}
         </div>
       )}
       <div
-        className="parallax-container-small"
+        className='parallax-container-small'
         style={{ backgroundImage: "url(/rio_beach.jpg)" }}
       ></div>
     </footer>

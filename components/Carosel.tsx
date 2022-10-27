@@ -66,7 +66,11 @@ export const Carosel: React.FC<CaroselProps> = ({ items, header }) => {
             <div className={styles["item-number"]}>
               {index + 1} / {items.length}
             </div>
-            <Image src={item.src} layout="fill" objectFit="contain" />
+            <Image
+              src={item.src}
+              fill={true}
+              style={{ objectFit: "contain" }}
+            />
             {item.caption && (
               <div style={{ display: "flex", justifyContent: "center" }}>
                 <div className={`${styles["item-caption"]} fade`}>
