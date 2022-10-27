@@ -12,7 +12,12 @@ export const FundItem: React.FC<Fund> = ({ label, dollar, real, img }) => {
       }}
     >
       <div style={{ position: "relative", width: "250px", height: "200px" }}>
-        <Image src={img.src} fill={true} style={{ objectFit: "contain" }} />
+        <Image
+          src={img.src}
+          fill={true}
+          style={{ objectFit: "contain" }}
+          alt={label}
+        />
       </div>
       <div>{label}</div>
       <div>
