@@ -2,9 +2,16 @@ import { GetStaticProps, NextPage } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "react-i18next";
 import { FundItem } from "../components/FundItem";
+import planePic from "../public/plane.png";
+import tourPic from "../public/tour.png";
+import dinnerPic from "../public/dinner.png";
+import bedPic from "../public/bed.png";
+import trainPic from "../public/train.png";
+import beerPic from "../public/beer.png";
+import { StaticImageData } from "next/image";
 
 export interface Fund {
-  imgSrc: string;
+  img: StaticImageData;
   label: string;
   dollar: string;
   real: string;
@@ -18,46 +25,46 @@ const Honeyfund: NextPage = () => {
       label: "Passagem aérea / Airplane ticket",
       dollar: "$200",
       real: "R$250",
-      imgSrc: "/plane.png",
+      img: planePic,
     },
     {
       label: "Passeios / Tours",
       dollar: "$150",
       real: "R$200",
-      imgSrc: "/tour.png",
+      img: tourPic,
     },
     {
       label: "Jantar romântico/Romantic dinner",
       dollar: "$100",
       real: "R$150",
-      imgSrc: "/dinner.png",
+      img: dinnerPic,
     },
     {
       label: "Hospedagem / Accomodation",
       dollar: "$100",
       real: "R$150",
-      imgSrc: "/bed.png",
+      img: bedPic,
     },
     {
       label: "Transporte / Transport",
       dollar: "$50",
       real: "R$100",
-      imgSrc: "/train.png",
+      img: trainPic,
     },
     {
       label: "Cerveja e comidas / Beer and food",
       dollar: "$20",
       real: "R$50",
-      imgSrc: "/beer.png",
+      img: beerPic,
     },
   ];
   return (
-    <main className="page-wrapper">
-      <section className="content-stripe-thin">
+    <main className='page-wrapper'>
+      <section className='content-stripe-thin'>
         <h3>{t("fundTitle")}</h3>
         <p>{t("fundIntro")}</p>
         <h3>Payment Methods</h3>
-        <div className="payment-methods">
+        <div className='payment-methods'>
           <div>
             <h3>Brazil</h3>
             <p>Pix nicole.guimaraesoc@gmail.com</p>
@@ -69,10 +76,10 @@ const Honeyfund: NextPage = () => {
         </div>
         <p style={{ textAlign: "center" }}>{t("fundNote")}</p>
       </section>
-      <section className="content-stripe-thin">
-        <div className="item-grid">
+      <section className='content-stripe-thin'>
+        <div className='item-grid'>
           {funds.map((fund) => (
-            <FundItem key={fund.imgSrc} {...{ ...fund }} />
+            <FundItem key={fund.img.src} {...{ ...fund }} />
           ))}
         </div>
       </section>

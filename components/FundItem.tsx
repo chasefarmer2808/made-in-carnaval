@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Fund } from "../pages/honeyfund";
 
-export const FundItem: React.FC<Fund> = ({ label, dollar, real, imgSrc }) => {
+export const FundItem: React.FC<Fund> = ({ label, dollar, real, img }) => {
   return (
     <div
       style={{
@@ -12,7 +12,7 @@ export const FundItem: React.FC<Fund> = ({ label, dollar, real, imgSrc }) => {
       }}
     >
       <div style={{ position: "relative", width: "250px", height: "200px" }}>
-        <Image src={imgSrc} layout="fill" objectPosition="contain" />
+        <Image src={img.src} fill={true} style={{ objectFit: "contain" }} />
       </div>
       <div>{label}</div>
       <div>
