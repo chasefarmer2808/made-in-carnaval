@@ -71,6 +71,11 @@ export const Carosel: React.FC<CaroselProps> = ({ items, header }) => {
                   priority
                 />
               </div>
+              {item.caption && (
+                <div style={{ display: "flex", justifyContent: "center" }}>
+                  <div className={styles["item-caption"]}>{item.caption}</div>
+                </div>
+              )}
             </div>
           ))}
         </div>
