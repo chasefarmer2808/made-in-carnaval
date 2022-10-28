@@ -1,5 +1,6 @@
 import { NextPage } from "next";
 import { Carosel, CaroselItem } from "../components/Carosel";
+import styles from "../styles/Gallery.module.css";
 import mexicoPic from "../public/gallery/mexico.jpg";
 import balt2020Pic from "../public/gallery/baltimore_2020.jpg";
 import dcPic from "../public/gallery/dc.jpg";
@@ -57,13 +58,11 @@ const items: CaroselItem[] = [
 const Gallery: NextPage = () => {
   return (
     <main
+      className={styles["gallery-page"]}
       style={{
         height: "100vh",
         paddingTop: "10px",
         backgroundColor: "white",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
       }}
     >
       <Carosel items={items} />

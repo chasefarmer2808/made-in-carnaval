@@ -120,7 +120,7 @@
 .embla__slide__inner {
   position: relative;
   overflow: hidden;
-  height: 80vh;
+  height: 50vh;
 }
 
 .embla__button {
@@ -192,4 +192,10 @@
 .embla__dot.is-selected:after {
   background-color: #1bcacd;
   opacity: 1;
+}
+
+@media screen and (min-width: 600px) {
+  .embla__slide__inner {
+    height: 80vh;
+  }
 }
