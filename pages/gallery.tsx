@@ -1,45 +1,56 @@
 import { NextPage } from "next";
 import { Carosel, CaroselItem } from "../components/Carosel";
+import styles from "../styles/Gallery.module.css";
+import mexicoPic from "../public/gallery/mexico.jpg";
+import balt2020Pic from "../public/gallery/baltimore_2020.jpg";
+import dcPic from "../public/gallery/dc.jpg";
+import shanenPic from "../public/gallery/shanendoa.jpg";
+import rioPic from "../public/gallery/rio.jpg";
+import salvPic from "../public/gallery/salvador.jpg";
+import chapPic from "../public/gallery/chapada.jpg";
+import palmPic from "../public/gallery/palm_beach.jpg";
+import nycPic from "../public/gallery/nyc.jpg";
+import balt2022Pic from "../public/gallery/baltimore_2022.jpg";
 
 const items: CaroselItem[] = [
   {
-    src: "/gallery/mexico.jpg",
+    img: mexicoPic,
     caption: "Chichenitza, Mexico, 2020",
   },
   {
-    src: "/gallery/baltimore_2020.jpg",
+    img: balt2020Pic,
     caption: "Baltimore, 2020",
   },
   {
-    src: "/gallery/dc.jpg",
+    img: dcPic,
     caption: "Washington DC, 2020",
   },
   {
-    src: "/gallery/shanendoa.jpg",
+    img: shanenPic,
     caption: "Shenandoah, Virginia, 2021",
   },
   {
-    src: "/gallery/rio.jpg",
+    img: rioPic,
     caption: "Rio de Janeiro, Brazil, 2021",
   },
   {
-    src: "/gallery/salvador.jpg",
+    img: salvPic,
     caption: "Salvador, Brazil, 2021",
   },
   {
-    src: "/gallery/chapada.jpg",
+    img: chapPic,
     caption: "Chapada Diamantina, Brazil, 2021",
   },
   {
-    src: "/gallery/palm_beach.jpg",
+    img: palmPic,
     caption: "Palm Beach, Florida, 2022",
   },
   {
-    src: "/gallery/nyc.jpg",
+    img: nycPic,
     caption: "New York City, 2022",
   },
   {
-    src: "/gallery/baltimore_2022.jpg",
+    img: balt2022Pic,
     caption: "Baltimore, 2022",
   },
 ];
@@ -47,13 +58,11 @@ const items: CaroselItem[] = [
 const Gallery: NextPage = () => {
   return (
     <main
+      className={styles["gallery-page"]}
       style={{
         height: "100vh",
         paddingTop: "10px",
         backgroundColor: "white",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
       }}
     >
       <Carosel items={items} />
