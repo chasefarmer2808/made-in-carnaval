@@ -1,7 +1,9 @@
 .nav-link-button {
-    padding: 8px;
+    padding: 4px;
     background-color: transparent;
     width: fit-content;
+    border-bottom: 2px solid var(--bg-color-accent);
+    margin: 4px;
 }
 
 .nav-link-active {
