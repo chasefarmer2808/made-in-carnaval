@@ -2,3 +2,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+.banner-container {
+  background-image: url("/rioBeachMobile.webp");
+}
+
+@media screen and (min-width: 600px) {
+  .banner-container {
+    background-image: url("/rioBeach.webp");
+  }
+}

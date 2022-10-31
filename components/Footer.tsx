@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import styles from "../styles/Footer.module.css";
 import { brLinks, usLinks } from "./Navbar";
-import { NavLink } from "./NavLink";
 
 export const Footer: React.FC = () => {
   const [links, setLinks] = useState(usLinks);
@@ -33,8 +32,7 @@ export const Footer: React.FC = () => {
         </div>
       )}
       <div
-        className='parallax-container-small'
-        style={{ backgroundImage: "url(/rio_beach.jpg)" }}
+        className={`${styles["banner-container"]} parallax-container-small`}
       ></div>
     </footer>
   );

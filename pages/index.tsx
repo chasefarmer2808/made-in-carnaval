@@ -1,7 +1,6 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
@@ -15,10 +14,7 @@ const Home: NextPage = () => {
         <title>Made In Rio</title>
       </Head>
       <main className={styles.main}>
-        <div
-          className='parallax-container'
-          style={{ backgroundImage: "url(/banner.jpg)" }}
-        >
+        <div className={`parallax-container ${styles["banner-container"]}`}>
           <div className='abs-center-container'>
             <div
               className='abs-center-content bold'
@@ -41,8 +37,7 @@ const Home: NextPage = () => {
           <p>{t("rioContent2")}</p>
         </div>
         <div
-          className='parallax-container'
-          style={{ backgroundImage: "url(/couple2.jpg)" }}
+          className={`parallax-container ${styles["couple-container"]}`}
         ></div>
         <div className='content-stripe'>
           <h3>{t("guideTitle")}</h3>
