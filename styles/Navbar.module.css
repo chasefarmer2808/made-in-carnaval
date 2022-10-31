@@ -17,6 +17,7 @@
   align-items: center;
   border-top: 1px solid var(--bg-color-accent);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  padding: 8px;
 }
 
 .nav-menu-btn {
@@ -30,6 +31,7 @@
 
 .language-menu-container-mobile {
   display: block;
+  margin-top: 16px;
 }
 
 @media screen and (min-width: 600px) {

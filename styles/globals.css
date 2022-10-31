@@ -71,6 +71,15 @@ button {
   border: none;
   background: none;
   cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+button.primary {
+  align-items: center;
+  font-size: 1.4rem;
+  background-color: var(--bg-color-tertiary);
+  color: white;
+  padding: 4px;
 }
 
 button:active {

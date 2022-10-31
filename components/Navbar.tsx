@@ -67,10 +67,16 @@ export const brLinks: NavLinkProps[] = [
   },
 ];
 
+enum Langs {
+  enUS = "English",
+  ptBR = "Português",
+}
+
 export const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [navClass, setNavClass] = useState("");
   const [links, setLinks] = useState(usLinks);
+  const [langBtnText, setLangBtnText] = useState(Langs.ptBR);
   const prevScrollPos = useRef(0);
   const router = useRouter();
   const { pathname, asPath, query } = router;
@@ -78,6 +84,7 @@ export const Navbar: React.FC = () => {
   useEffect(() => {
     if (router.locale === "pt-BR") {
       setLinks(brLinks);
+      setLangBtnText(Langs.enUS);
     }
     setMenuOpen(false);
   }, [router]);
@@ -101,11 +108,13 @@ export const Navbar: React.FC = () => {
     window.addEventListener("scroll", handleScroll, { passive: true });
   }, []);
 
-  const handleLanguageSelect = (language: string) => {
-    if (language === "Portuguese") {
-      router.push({ pathname, query }, asPath, { locale: "pt-BR" });
-    } else {
+  const handleLanguageSelect = () => {
+    if (langBtnText === Langs.enUS) {
       router.push({ pathname, query }, asPath, { locale: "en-US" });
+      setLangBtnText(Langs.ptBR);
+    } else {
+      router.push({ pathname, query }, asPath, { locale: "pt-BR" });
+      setLangBtnText(Langs.enUS);
     }
   };
 
@@ -118,9 +127,9 @@ export const Navbar: React.FC = () => {
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? (
-            <Icon name="cancel" sizeRem={2} />
+            <Icon name='cancel' sizeRem={2} />
           ) : (
-            <Icon name="hamburger" sizeRem={2} />
+            <Icon name='hamburger' sizeRem={2} />
           )}
         </span>
       </div>
@@ -135,17 +144,15 @@ export const Navbar: React.FC = () => {
           <NavLink key={link.href} href={link.href} label={link.label} />
         ))}
         <span className={styles["language-menu-container-mobile"]}>
-          <DropDownMenu
-            items={["English", "Portuguese"]}
-            onSelect={handleLanguageSelect}
-          />
+          <button className='primary' onClick={handleLanguageSelect}>
+            {langBtnText}
+          </button>
         </span>
       </span>
       <div className={styles["language-menu-container"]}>
-        <DropDownMenu
-          items={["English", "Portuguese"]}
-          onSelect={handleLanguageSelect}
-        />
+        <button className='primary' onClick={handleLanguageSelect}>
+          {langBtnText}
+        </button>
       </div>
     </nav>
   );
