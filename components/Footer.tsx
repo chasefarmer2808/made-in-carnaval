@@ -7,6 +7,7 @@ import { brLinks, usLinks } from "./Navbar";
 export const Footer: React.FC = () => {
   const [links, setLinks] = useState(usLinks);
   const [showSiteMap, setShowSiteMap] = useState(true);
+  const [showFooterBanner, setShowFooterBanner] = useState(true);
   const router = useRouter();
 
   useEffect(() => {
@@ -17,6 +18,10 @@ export const Footer: React.FC = () => {
     // Hide sitemap on home page.
     if (router.pathname === "/") {
       setShowSiteMap(false);
+    }
+
+    if (router.pathname === "/rsvp") {
+      setShowFooterBanner(false);
     }
   }, [router]);
 
@@ -31,9 +36,11 @@ export const Footer: React.FC = () => {
           ))}
         </div>
       )}
-      <div
-        className={`${styles["banner-container"]} parallax-container-small`}
-      ></div>
+      {showFooterBanner && (
+        <div
+          className={`${styles["banner-container"]} parallax-container-small`}
+        ></div>
+      )}
     </footer>
   );
 };
