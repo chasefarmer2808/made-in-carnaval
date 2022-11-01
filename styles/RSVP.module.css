@@ -1,0 +1,10 @@
+.banner-container {
+  background-image: url("/gardenMobile.webp");
+  height: 100vh;
+}
+
+@media (min-width: 600px) {
+  .banner-container {
+    background-image: url("/garden.webp");
+  }
+}
