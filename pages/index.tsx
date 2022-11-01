@@ -29,6 +29,16 @@ const Home: NextPage = () => {
               Rio de Janeiro, Brazil
             </div>
             <div className='abs-center-content bold'>April 15, 2023</div>
+            <div className='abs-center-content'>
+              <a
+                className='link-button'
+                href='https://docs.google.com/forms/d/1zgR0WWdiu1pgyZjOMnMbNLiUgDu1vSvIDEInEwJ3a4A/edit'
+                target='_blank'
+                rel='noreferrer'
+              >
+                {t("rsvpLink")}
+              </a>
+            </div>
           </div>
         </div>
         <div className='content-stripe'>
