@@ -37,7 +37,9 @@ const Home: NextPage<HomePageProps> = ({ daysToGo }) => {
             </div>
             <div className='abs-center-content bold'>
               <div>April 15, 2023</div>
-              <div style={{ paddingTop: "8px" }}>{daysToGo} days to go!</div>
+              <div style={{ paddingTop: "8px" }}>
+                {`${daysToGo} ${daysToGo === 1 ? t("dayToGo") : t("daysToGo")}`}
+              </div>
             </div>
             <div className='abs-center-content'>
               <a
