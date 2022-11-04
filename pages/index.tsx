@@ -5,7 +5,14 @@ import styles from "../styles/Home.module.css";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
 
-const Home: NextPage = () => {
+interface HomePageProps {
+  daysToGo: number;
+}
+
+const WEDDING_DATE = new Date("2023-04-15");
+const MILLIS_IN_A_DAY = 1000 * 60 * 60 * 24;
+
+const Home: NextPage<HomePageProps> = ({ daysToGo }) => {
   const { t } = useTranslation("common");
 
   return (
@@ -28,7 +35,10 @@ const Home: NextPage = () => {
             >
               Rio de Janeiro, Brazil
             </div>
-            <div className='abs-center-content bold'>April 15, 2023</div>
+            <div className='abs-center-content bold'>
+              <div>April 15, 2023</div>
+              <div style={{ paddingTop: "8px" }}>{daysToGo} days to go!</div>
+            </div>
             <div className='abs-center-content'>
               <a
                 className='link-button'
@@ -87,9 +97,17 @@ const Home: NextPage = () => {
 export const getStaticProps: GetStaticProps = async ({ locale = "en-US" }) => {
   return {
     props: {
+      daysToGo: daysToGo(),
       ...(await serverSideTranslations(locale, ["common"])),
     },
+    revalidate: 86400, // Once a day.
   };
+};
+
+const daysToGo = (): number => {
+  const now = new Date();
+  const diff = WEDDING_DATE.getTime() - now.getTime();
+  return Math.floor(diff / MILLIS_IN_A_DAY);
 };
 
 export default Home;
