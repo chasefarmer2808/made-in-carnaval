@@ -109,7 +109,7 @@ export const getStaticProps: GetStaticProps = async ({ locale = "en-US" }) => {
 const daysToGo = (): number => {
   const now = new Date();
   const diff = WEDDING_DATE.getTime() - now.getTime();
-  return Math.floor(diff / MILLIS_IN_A_DAY);
+  return now.getSeconds(); // Math.floor(diff / MILLIS_IN_A_DAY);
 };
 
 export default Home;
