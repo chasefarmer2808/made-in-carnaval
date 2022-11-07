@@ -102,6 +102,7 @@ export const getStaticProps: GetStaticProps = async ({ locale = "en-US" }) => {
       daysToGo: daysToGo(),
       ...(await serverSideTranslations(locale, ["common"])),
     },
+    revalidate: 10,
   };
 };
 
