@@ -1,0 +1,17 @@
+.garden-container {
+  background-image: url("/gardenMobile.jpg");
+}
+
+.bike-container {
+  background-image: url("/bikeMobile.jpg");
+}
+
+@media (min-width: 600px) {
+  .garden-container {
+    background-image: url("/garden.jpg");
+  }
+
+  .bike-container {
+    background-image: url("/bike.jpg");
+  }
+}

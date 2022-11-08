@@ -3,6 +3,7 @@ import { ImageLink, ImageLinkProps } from "../components/ImageLink";
 import cristoPic from "../public/cristo.png";
 import paoPic from "../public/pao.png";
 import centerPic from "../public/center.png";
+import styles from "../styles/Things.module.css";
 
 const thingsData: ImageLinkProps[] = [
   {
@@ -45,10 +46,7 @@ const Things: NextPage = () => {
           </p>
         </div>
       </section>
-      <div
-        className='parallax-container-small'
-        style={{ backgroundImage: "url(/garden2.jpg)" }}
-      >
+      <div className={`${styles["garden-container"]} parallax-container-small`}>
         <div className='abs-center-container'>
           <a
             className='link-button'
@@ -69,8 +67,7 @@ const Things: NextPage = () => {
         </p>
       </section>
       <div
-        className='parallax-container-small'
-        style={{ backgroundImage: "url(/bike2.jpg)" }}
+        className={`${styles["bike-container"]} parallax-container-small`}
       ></div>
       <section className='content-stripe-thin'>
         <h3>Food and Drink 🤤</h3>
