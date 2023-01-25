@@ -8,7 +8,7 @@ const Ceremony: NextPage = () => {
   const { t } = useTranslation("common");
 
   return (
-    <main className="page-wrapper">
+    <main>
       <div className={`${styles["banner-container"]} parallax-container`}>
         <div className="abs-center-container" style={{ margin: "16px" }}>
           <div className={`${styles["ceremony-content"]} abs-center-content`}>
