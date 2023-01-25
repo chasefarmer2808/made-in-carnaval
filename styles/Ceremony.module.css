@@ -2,9 +2,8 @@
   margin: 0;
 }
 
-.ceremony-content p {
+.ceremony-content-label {
   font-weight: bold;
-  margin: 0;
 }
 
 .ceremony-content-grid {
@@ -12,13 +11,13 @@
   grid-template-columns: 1fr 4fr;
   grid-template-rows: auto auto;
   justify-items: start;
-  gap: 4px;
+  text-align: left;
 }
 
-.ceremony-item {
-  align-self: center;
-  padding-left: 8px;
-  padding-top: 4px;
+.ceremony-content-grid > div {
+  border-bottom: 1px solid var(--bg-color-tertiary);
+  width: 100%;
+  padding: 6px;
 }
 
 .banner-container {

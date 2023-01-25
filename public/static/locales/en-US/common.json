@@ -20,5 +20,12 @@
   "rsvpIntro": "We hope you can make it!",
   "rsvpLink": "Click Here to RSVP",
   "daysToGo": "days to go!",
-  "dayToGo": "day to go!"
+  "dayToGo": "day to go!",
+  "ceremonyPageTitle": "Ceremony and Reception",
+  "when": "When",
+  "where": "Where",
+  "details": "Details",
+  "attire": "Attire",
+  "detailsInfo": "The ceremony will start promptly at 6:30pm. Followed by the reception, downstairs at the same location.",
+  "attireInfo": "Semi-formal. Suit optional."
 }
