@@ -11,6 +11,10 @@ export const usLinks: NavLinkProps[] = [
     href: "/",
   },
   {
+    label: "Ceremony",
+    href: "/ceremony",
+  },
+  {
     label: "Travel Guide",
     href: "/guide",
   },
@@ -40,6 +44,10 @@ export const brLinks: NavLinkProps[] = [
   {
     label: "Home",
     href: "/",
+  },
+  {
+    label: "Cerimônia",
+    href: "/ceremony",
   },
   {
     label: "Travel Guide",
@@ -127,9 +135,9 @@ export const Navbar: React.FC = () => {
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? (
-            <Icon name='cancel' sizeRem={2} />
+            <Icon name="cancel" sizeRem={2} />
           ) : (
-            <Icon name='hamburger' sizeRem={2} />
+            <Icon name="hamburger" sizeRem={2} />
           )}
         </span>
       </div>
@@ -144,13 +152,13 @@ export const Navbar: React.FC = () => {
           <NavLink key={link.href} href={link.href} label={link.label} />
         ))}
         <span className={styles["language-menu-container-mobile"]}>
-          <button className='primary' onClick={handleLanguageSelect}>
+          <button className="primary" onClick={handleLanguageSelect}>
             {langBtnText}
           </button>
         </span>
       </span>
       <div className={styles["language-menu-container"]}>
-        <button className='primary' onClick={handleLanguageSelect}>
+        <button className="primary" onClick={handleLanguageSelect}>
           {langBtnText}
         </button>
       </div>

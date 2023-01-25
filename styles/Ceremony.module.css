@@ -1,0 +1,32 @@
+.ceremony-content h3 {
+  margin: 0;
+}
+
+.ceremony-content p {
+  font-weight: bold;
+  margin: 0;
+}
+
+.ceremony-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: start;
+}
+
+.ceremony-item {
+  align-self: center;
+  padding-left: 8px;
+  padding-top: 4px;
+}
+
+.banner-container {
+  background-image: url("/venue.jpg");
+  height: 100vh;
+}
+
+@media (min-width: 600px) {
+  .banner-container {
+    background-image: url("/venue.jpg");
+  }
+}
