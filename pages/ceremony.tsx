@@ -10,9 +10,15 @@ const Ceremony: NextPage = () => {
             <h1>Ceremony and Reception</h1>
             <div className={styles["ceremony-content-grid"]}>
               <div>When:</div>
-              <div>April 15</div>
+              <div>April 15, 2023</div>
               <div>Where:</div>
-              <div>Cais do Oriente</div>
+              <div>
+                <span>Cais do Oriente</span>
+                <br></br>
+                <span>Rua Visonde de Itaborai, 8</span>
+                <br></br>
+                <span>Centro, Rip de Janeiro</span>
+              </div>
             </div>
           </div>
         </div>
