@@ -1,6 +1,7 @@
 import { GetStaticProps, NextPage } from "next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "react-i18next";
+import { Icon } from "../components/Icon";
 import styles from "../styles/Ceremony.module.css";
 
 const Ceremony: NextPage = () => {
@@ -26,6 +27,26 @@ const Ceremony: NextPage = () => {
                 <span>Rua Visonde de Itaborai, 8</span>
                 <br></br>
                 <span>Centro, Rio de Janeiro</span>
+                <br></br>
+                <div>
+                  <a
+                    className="inline"
+                    style={{ marginRight: "8px" }}
+                    rel="noreferrer"
+                    target="_blank"
+                    href="https://www.google.com/maps/place/Cais+do+Oriente/@-22.9013405,-43.1755447,15z/data=!4m5!3m4!1s0x0:0x66b71b30656c1ee5!8m2!3d-22.9013405!4d-43.1755447"
+                  >
+                    {t("map")} <Icon name="external-link" />
+                  </a>
+                  <a
+                    className="inline"
+                    rel="noreferrer"
+                    target="_blank"
+                    href="https://caisdooriente-rj.com.br/"
+                  >
+                    {t("website")} <Icon name="external-link" />
+                  </a>
+                </div>
               </div>
               <div className={styles["ceremony-content-label"]}>
                 {t("details")}:
