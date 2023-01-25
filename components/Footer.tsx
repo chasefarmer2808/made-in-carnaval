@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import styles from "../styles/Footer.module.css";
 import { brLinks, usLinks } from "./Navbar";
 
+const NO_FOOTER_PAGES = ["/rsvp", "/ceremony"];
+
 export const Footer: React.FC = () => {
   const [links, setLinks] = useState(usLinks);
   const [showSiteMap, setShowSiteMap] = useState(true);
@@ -20,7 +22,7 @@ export const Footer: React.FC = () => {
       setShowSiteMap(false);
     }
 
-    if (router.pathname === "/rsvp") {
+    if (NO_FOOTER_PAGES.includes(router.pathname)) {
       setShowFooterBanner(false);
     }
   }, [router]);
@@ -28,9 +30,9 @@ export const Footer: React.FC = () => {
   return (
     <footer>
       {showSiteMap && (
-        <div className='link-container' style={{ padding: "8px" }}>
+        <div className="link-container" style={{ padding: "8px" }}>
           {links.map((link) => (
-            <Link key={link.href} className='link-button' href={link.href}>
+            <Link key={link.href} className="link-button" href={link.href}>
               {link.label}
             </Link>
           ))}
