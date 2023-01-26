@@ -102,6 +102,10 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
+footer {
+  background-color: var(--bg-color-accent);
+}
+
 .nav-hidden {
   transform: translateY(calc(-1 * var(--nav-height)));
 }
