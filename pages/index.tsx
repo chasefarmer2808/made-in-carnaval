@@ -22,38 +22,38 @@ const Home: NextPage<HomePageProps> = ({ daysToGo }) => {
       </Head>
       <main className={styles.main}>
         <div className={`parallax-container ${styles["banner-container"]}`}>
-          <div className='abs-center-container'>
+          <div className="abs-center-container">
             <div
-              className='abs-center-content bold'
+              className="abs-center-content bold"
               style={{ fontSize: "36px" }}
             >
               Nicole & Chase
             </div>
             <div
-              className='abs-center-content bold'
+              className="abs-center-content bold"
               style={{ paddingBottom: "0" }}
             >
               Rio de Janeiro, Brazil
             </div>
-            <div className='abs-center-content bold'>
-              <div>April 15, 2023</div>
+            <div className="abs-center-content bold">
+              <div>{t("weddingDate")}</div>
               <div style={{ paddingTop: "8px" }}>
                 {`${daysToGo} ${daysToGo === 1 ? t("dayToGo") : t("daysToGo")}`}
               </div>
             </div>
-            <div className='abs-center-content'>
+            <div className="abs-center-content">
               <a
-                className='link-button'
-                href='https://docs.google.com/forms/d/1zgR0WWdiu1pgyZjOMnMbNLiUgDu1vSvIDEInEwJ3a4A/edit'
-                target='_blank'
-                rel='noreferrer'
+                className="link-button"
+                href="https://docs.google.com/forms/d/1zgR0WWdiu1pgyZjOMnMbNLiUgDu1vSvIDEInEwJ3a4A/edit"
+                target="_blank"
+                rel="noreferrer"
               >
                 {t("rsvpLink")}
               </a>
             </div>
           </div>
         </div>
-        <div className='content-stripe'>
+        <div className="content-stripe">
           <h3>{t("rioTitle")}</h3>
           <p>{t("rioContent1")}</p>
           <p>{t("rioContent2")}</p>
@@ -61,32 +61,32 @@ const Home: NextPage<HomePageProps> = ({ daysToGo }) => {
         <div
           className={`parallax-container ${styles["couple-container"]}`}
         ></div>
-        <div className='content-stripe'>
+        <div className="content-stripe">
           <h3>{t("guideTitle")}</h3>
           <p>{t("guideIntro")}</p>
-          <div className='link-container'>
-            <Link className='link-button' href='/guide'>
+          <div className="link-container">
+            <Link className="link-button" href="/guide">
               Travel Guide
             </Link>
-            <Link className='link-button' href='/things'>
+            <Link className="link-button" href="/things">
               Things To Do
             </Link>
-            <Link className='link-button' href='/rsvp'>
+            <Link className="link-button" href="/rsvp">
               {t("navRsvp")}
             </Link>
-            <Link className='link-button' href='/honeyfund'>
+            <Link className="link-button" href="/honeyfund">
               {t("navFund")}
             </Link>
-            <Link className='link-button' href='/gallery'>
+            <Link className="link-button" href="/gallery">
               {t("navGallery")}
             </Link>
-            <Link className='link-button' href='/phrases'>
+            <Link className="link-button" href="/phrases">
               {t("navPhrases")}
             </Link>
           </div>
           <div style={{ textAlign: "center" }}>
             <h3>Questions? Email us at</h3>
-            <a className='inline' href='mailto:nicandchase@madeinrio2023.com'>
+            <a className="inline" href="mailto:nicandchase@madeinrio2023.com">
               nicandchase@madeinrio2023.com
             </a>
           </div>

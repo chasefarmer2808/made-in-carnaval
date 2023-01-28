@@ -19,7 +19,7 @@ const Ceremony: NextPage = () => {
       <div className="content-stripe">
         <div className={styles["ceremony-content-grid"]}>
           <div className={styles["ceremony-content-label"]}>{t("when")}:</div>
-          <div>April 15, 2023</div>
+          <div>{t("weddingDate")}</div>
           <div className={styles["ceremony-content-label"]}>{t("where")}:</div>
           <div>
             <span>Cais do Oriente</span>
