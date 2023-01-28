@@ -65,11 +65,11 @@ const Home: NextPage<HomePageProps> = ({ daysToGo }) => {
           <h3>{t("guideTitle")}</h3>
           <p>{t("guideIntro")}</p>
           <div className="link-container">
+            <Link className="link-button" href="/ceremony">
+              {t("navCeremony")}
+            </Link>
             <Link className="link-button" href="/guide">
               Travel Guide
-            </Link>
-            <Link className="link-button" href="/things">
-              Things To Do
             </Link>
             <Link className="link-button" href="/rsvp">
               {t("navRsvp")}
@@ -79,9 +79,6 @@ const Home: NextPage<HomePageProps> = ({ daysToGo }) => {
             </Link>
             <Link className="link-button" href="/gallery">
               {t("navGallery")}
-            </Link>
-            <Link className="link-button" href="/phrases">
-              {t("navPhrases")}
             </Link>
           </div>
           <div style={{ textAlign: "center" }}>

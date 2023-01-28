@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import { Icon } from "./Icon";
 import { NavLink, NavLinkProps } from "./NavLink";
 import styles from "../styles/Navbar.module.css";
-import { DropDownMenu } from "./DropDownMenu";
 
 export const usLinks: NavLinkProps[] = [
   {
