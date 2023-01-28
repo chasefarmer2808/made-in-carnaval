@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import styles from "../styles/Footer.module.css";
 import { brLinks, usLinks } from "./Navbar";
 
-const NO_FOOTER_PAGES = ["/rsvp", "/ceremony"];
+const NO_FOOTER_PAGES = ["/rsvp", "/ceremony", "/guide"];
 
 export const Footer: React.FC = () => {
   const [links, setLinks] = useState(usLinks);

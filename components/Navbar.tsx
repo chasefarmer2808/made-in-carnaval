@@ -19,10 +19,6 @@ export const usLinks: NavLinkProps[] = [
     href: "/guide",
   },
   {
-    label: "Things To Do",
-    href: "/things",
-  },
-  {
     label: "Gallery",
     href: "/gallery",
   },
@@ -52,10 +48,6 @@ export const brLinks: NavLinkProps[] = [
   {
     label: "Travel Guide",
     href: "/guide",
-  },
-  {
-    label: "Things To Do",
-    href: "/things",
   },
   {
     label: "Galeria",

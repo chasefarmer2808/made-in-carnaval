@@ -4,10 +4,34 @@
   align-items: center;
 }
 
+.travel-container {
+  background-image: url("/rioBeachMobile.webp");
+}
+
+.garden-container {
+  background-image: url("/gardenMobile.jpg");
+}
+
+.bike-container {
+  background-image: url("/bikeMobile.jpg");
+}
+
 @media screen and (min-width: 600px) {
   .hotel-listings {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+  }
+
+  .travel-container {
+    background-image: url("/rioBeach.webp");
+  }
+
+  .garden-container {
+    background-image: url("/garden.jpg");
+  }
+
+  .bike-container {
+    background-image: url("/bike.jpg");
   }
 }
