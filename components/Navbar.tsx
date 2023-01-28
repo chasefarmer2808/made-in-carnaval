@@ -30,10 +30,6 @@ export const usLinks: NavLinkProps[] = [
     label: "RSVP",
     href: "/rsvp",
   },
-  {
-    label: "Portuguese Phrases",
-    href: "/phrases",
-  },
 ];
 
 export const brLinks: NavLinkProps[] = [
@@ -60,10 +56,6 @@ export const brLinks: NavLinkProps[] = [
   {
     label: "Confirmação de presença",
     href: "/rsvp",
-  },
-  {
-    label: "Frases em Inglês",
-    href: "/phrases",
   },
 ];
 
