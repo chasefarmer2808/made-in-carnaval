@@ -227,7 +227,20 @@ const Guide: NextPage = () => {
       <div
         className="parallax-container-small"
         style={{ backgroundImage: "url(/food.jpg)" }}
-      ></div>
+      >
+        <div className="abs-center-container">
+          <div className="abs-center-content">
+            <a
+              className="link-button"
+              href="https://drive.google.com/file/d/1747qIUyr6WFpUYOaXjEnyYddjZq5Y1gg/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Download Our Full Travel Brochure
+            </a>
+          </div>
+        </div>
+      </div>
     </main>
   );
 };
