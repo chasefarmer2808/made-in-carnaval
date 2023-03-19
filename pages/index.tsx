@@ -41,16 +41,6 @@ const Home: NextPage<HomePageProps> = ({ daysToGo }) => {
                 {`${daysToGo} ${daysToGo === 1 ? t("dayToGo") : t("daysToGo")}`}
               </div>
             </div>
-            <div className="abs-center-content">
-              <a
-                className="link-button"
-                href="https://docs.google.com/forms/d/1zgR0WWdiu1pgyZjOMnMbNLiUgDu1vSvIDEInEwJ3a4A/edit"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {t("rsvpLink")}
-              </a>
-            </div>
           </div>
         </div>
         <div className="content-stripe">
@@ -70,9 +60,6 @@ const Home: NextPage<HomePageProps> = ({ daysToGo }) => {
             </Link>
             <Link className="link-button" href="/guide">
               Travel Guide
-            </Link>
-            <Link className="link-button" href="/rsvp">
-              {t("navRsvp")}
             </Link>
             <Link className="link-button" href="/honeyfund">
               {t("navFund")}

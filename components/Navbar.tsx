@@ -25,10 +25,6 @@ export const usLinks: NavLinkProps[] = [
     label: "Honeyfund",
     href: "/honeyfund",
   },
-  {
-    label: "RSVP",
-    href: "/rsvp",
-  },
 ];
 
 export const brLinks: NavLinkProps[] = [
@@ -51,10 +47,6 @@ export const brLinks: NavLinkProps[] = [
   {
     label: "Cota Lua de Mel",
     href: "/honeyfund",
-  },
-  {
-    label: "Confirmação de presença",
-    href: "/rsvp",
   },
 ];
 
